@@ -64,7 +64,7 @@ describe('LastLoginIpComponent', () => {
   })
 
   xit('should not set Last-Login IP if none is present in JWT', () => { // FIXME Expected state seems to leak over from previous test case occasionally
-    localStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7fX0.bVBhvll6IaeR3aUdoOeyR8YZe2S2DfhGAxTGfd9enLw')
+
     component.ngOnInit()
     expect(sanitizer.bypassSecurityTrustHtml).not.toHaveBeenCalled()
   })

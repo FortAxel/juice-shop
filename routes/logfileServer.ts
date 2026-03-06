@@ -11,7 +11,9 @@ export function serveLogFiles () {
     const file = params.file
 
     if (!file.includes('/')) {
-      res.sendFile(path.resolve('logs/', file))
+npm audit fix
+# Pour les breaking changes :
+npm audit fix --force
     } else {
       res.status(403)
       next(new Error('File names cannot contain forward slashes!'))
